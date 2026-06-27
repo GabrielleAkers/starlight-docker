@@ -27,6 +27,6 @@ COPY --chown=${RUN_AS} server_config.toml /home/${RUN_AS}/server/
 
 RUN chmod +x /home/${RUN_AS}/server/entrypoint.sh
 
-WORKDIR /home/${RUN_AS}/data
+WORKDIR /home/${RUN_AS}/server
 
-ENTRYPOINT [ "/home/${RUN_AS}/server/entrypoint.sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]
