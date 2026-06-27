@@ -4,8 +4,6 @@ ARG UID
 ARG GUID
 ARG RUN_AS
 
-ENV RUN_AS ${RUN_AS}
-
 USER root
 
 # needed to accept steam EULA
@@ -29,4 +27,4 @@ RUN chmod +x /home/${RUN_AS}/server/entrypoint.sh
 
 WORKDIR /home/${RUN_AS}/server
 
-ENTRYPOINT [ "entrypoint.sh" ]
+ENTRYPOINT [ "./entrypoint.sh" ]

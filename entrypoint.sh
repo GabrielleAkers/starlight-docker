@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CHECK_FOR=$VERSION
+RUN_AS=$(whoami)
 
 cd "/home/$RUN_AS/data"
 
