@@ -1,0 +1,22 @@
+services:
+  rsserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: 1002
+        GUID: 1002
+        RUN_AS: ss14
+    ports:
+      - 1212:1212/udp
+    volumes:
+      - ./data:/home/ss14/data
+    restart: unless-stopped
+    deploy:
+      restart_policy:
+        condition: "on-failure"
+        delay: 15s
+        max_attempts: 3
+        window: 120s
+    tty: true
+    stdin_open: true
