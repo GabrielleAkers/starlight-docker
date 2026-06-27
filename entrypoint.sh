@@ -8,6 +8,7 @@ cd "/home/$RUN_AS/data"
 if [ -f "/home/$RUN_AS/data/$CHECK_FOR.downloaded" ]; then
     echo "Already downloaded server files, dont need to redownload"
 else
+    echo "Downloading server files"
     wget "https://cdn.starlight.network/fork/starlight/version/$VERSION/file/SS14.Server_linux-x64.zip" -O "/home/$RUN_AS/data/SS14.zip"
     unzip "/home/$RUN_AS/data/SS14.zip"
     chmod +x "/home/$RUN_AS/data/Robust.Server"
