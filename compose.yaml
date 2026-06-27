@@ -11,6 +11,7 @@ services:
       VERSION: 602ae8dbd7e3b6278f833042010de1a90a4ec31c
     ports:
       - 1212:1212/udp
+      - 1212:1212/tcp
     volumes:
       - ./data:/home/ss14/data
     restart: unless-stopped
