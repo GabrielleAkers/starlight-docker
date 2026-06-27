@@ -1,5 +1,5 @@
 services:
-  rsserver:
+  ss14server:
     build:
       context: .
       dockerfile: Dockerfile
