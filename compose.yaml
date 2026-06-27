@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        UID: 1002
-        GUID: 1002
+        UID: 1212
+        GUID: 1212
         RUN_AS: ss14
     environment:
       VERSION: 602ae8dbd7e3b6278f833042010de1a90a4ec31c
